@@ -1,0 +1,29 @@
+{
+  "testSuite": "agent-allowance-app-e2e",
+  "executedAt": "2026-11-10T03:46:03.909Z",
+  "network": "genlayer-studionet",
+  "chainId": 61999,
+  "contracts": {
+    "vault": "0xd89C4fCB63773C01e8494EebaE7375C4d5992E07",
+    "gate": "0xAe5aD4f836f199B56307b5E018eF3be8b8dd0528"
+  },
+  "accounts": {
+    "owner": "0xF83B98094B37C2DA250242ae445a33ee80B409a5",
+    "agent": "0xd59eA518b3F09937C0E70E751F9eCE9B589cB37b",
+    "payee": "0x29ce6d6cf20851d18EB6716B7528beABc791034E"
+  },
+  "accountId": "12",
+  "spends": {
+    "spend1_approved": "45",
+    "spend2_denied_overcap": "46",
+    "spend3_denied_mismatch": "47",
+    "spend4_pending_resolved": "48"
+  },
+  "spendGateVerified": true,
+  "accountClosed": true,
+  "balances": {
+    "owner": "680",
+    "payee": "320"
+  },
+  "totalMinted": "13000"
+}
