@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Natural warm palette - Light mode */
+  --color-page: #F6F4EE;
+  --color-ink: #1E2523;
+  --color-ink-muted: #495450;
+  --color-primary: #2D5B63;
+  --color-primary-hover: #214349;
+  --color-primary-contrast: #FFFFFF;
+  --color-sand: #ECE7DB;
+  --color-sand-border: #DCD5C4;
+  --color-clay: #943D1A;
+  --color-clay-bg: #FBECE5;
+  --color-sage: #DCE8DD;
+  --color-sage-text: #1B5E20;
+  --color-brick: #A83226;
+  --color-brick-bg: #F9E2E0;
+}
+
+.dark {
+  /* Natural warm palette - Dark mode */
+  --color-page: #161D1A;
+  --color-ink: #F6F4EE;
+  --color-ink-muted: #A6B4AF;
+  --color-primary: #3F7A85;
+  --color-primary-hover: #4D929F;
+  --color-primary-contrast: #FFFFFF;
+  --color-sand: #1E2824;
+  --color-sand-border: #2C3A35;
+  --color-clay: #E07A5F;
+  --color-clay-bg: #321F1A;
+  --color-sage: #1E3A28;
+  --color-sage-text: #74C28D;
+  --color-brick: #E57373;
+  --color-brick-bg: #351C1E;
+}
+
+/* Base typography rules */
+html {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: var(--color-page);
+  color: var(--color-ink);
+}
+
+/* Focus styles: high-visibility 3px rings */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Input and Button minimum touch target and height */
+input, select, textarea, button {
+  min-height: 48px;
+  font-size: 18px;
+}
