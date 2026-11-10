@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                   href={CONTRACT_DEPLOYMENTS.allowanceVault.explorerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 ml-1 text-primary hover:underline break-all"
+                  className="inline-flex items-center gap-1 ml-1 text-primary dark:text-cyan-400 hover:underline break-all"
                 >
                   <span>{CONTRACT_DEPLOYMENTS.allowanceVault.address.slice(0, 10)}...</span>
                   <ExternalLink size={14} aria-hidden="true" />
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
                   href={CONTRACT_DEPLOYMENTS.spendGate.explorerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 ml-1 text-primary hover:underline break-all"
+                  className="inline-flex items-center gap-1 ml-1 text-primary dark:text-cyan-400 hover:underline break-all"
                 >
                   <span>{CONTRACT_DEPLOYMENTS.spendGate.address.slice(0, 10)}...</span>
                   <ExternalLink size={14} aria-hidden="true" />
@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
                   href="https://github.com/hypercybers99/agent-allowance-genlayer/tree/aa-v1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 text-primary dark:text-cyan-400 hover:underline"
                 >
                   <Github size={16} aria-hidden="true" />
                   <span>Contract Repo (tag aa-v1)</span>
@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
                   href="https://github.com/hypercybers99/agent-allowance-app"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 text-primary dark:text-cyan-400 hover:underline"
                 >
                   <Github size={16} aria-hidden="true" />
                   <span>Web App Repo (agent-allowance-app)</span>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
                   href="https://github.com/hypercybers99/agent-allowance-fixtures"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-primary hover:underline"
+                  className="inline-flex items-center gap-1.5 text-primary dark:text-cyan-400 hover:underline"
                 >
                   <ExternalLink size={16} aria-hidden="true" />
                   <span>Pinned Invoice Fixtures</span>

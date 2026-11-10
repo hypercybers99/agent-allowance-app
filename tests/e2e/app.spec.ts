@@ -71,23 +71,38 @@ test.describe('Agent Allowance Application E2E & Usability Suite', () => {
     expect(pFontSize).toBeGreaterThanOrEqual(16);
   });
 
-  test('accessibility audit has zero critical or serious WCAG violations', async ({ page }) => {
+  test('accessibility audit has zero critical or serious WCAG violations in light and dark mode', async ({ page }) => {
     const auditPages = ['', 'accounts', 'credits', 'evidence', 'limits'];
 
     for (const p of auditPages) {
       await page.goto(p);
-      const accessibilityScanResults = await new AxeBuilder({ page })
-        .withTags(['wcag2a', 'wcag2aa'])
-        .analyze();
+      for (const mode of ['light', 'dark']) {
+        if (mode === 'dark') {
+          await page.evaluate(() => {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+          });
+        } else {
+          await page.evaluate(() => {
+            document.documentElement.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+          });
+        }
+        await page.waitForTimeout(100);
 
-      const criticalOrSerious = accessibilityScanResults.violations.filter(
-        (v) => v.impact === 'critical' || v.impact === 'serious'
-      );
+        const accessibilityScanResults = await new AxeBuilder({ page })
+          .withTags(['wcag2a', 'wcag2aa'])
+          .analyze();
 
-      expect(
-        criticalOrSerious.length,
-        `Page ${p} has accessibility violations: ${JSON.stringify(criticalOrSerious, null, 2)}`
-      ).toBe(0);
+        const criticalOrSerious = accessibilityScanResults.violations.filter(
+          (v) => v.impact === 'critical' || v.impact === 'serious'
+        );
+
+        expect(
+          criticalOrSerious.length,
+          `Page ${p} (${mode}) has accessibility violations: ${JSON.stringify(criticalOrSerious, null, 2)}`
+        ).toBe(0);
+      }
     }
   });
 });

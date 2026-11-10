@@ -14,13 +14,13 @@ export const NoticeBanner: React.FC<NoticeBannerProps> = ({
 }) => {
   const bgClass =
     level === 'info'
-      ? 'bg-parchment-200 border-parchment-400 text-slate-800'
+      ? 'bg-sand border-sand-border text-ink'
       : level === 'error'
-      ? 'bg-clay-100 border-clay-400 text-clay-950'
-      : 'bg-sand border-sand-border text-ink';
+      ? 'bg-brick-bg border-brick/40 text-brick'
+      : 'bg-clay-bg border-clay/40 text-clay';
 
   const iconClass =
-    level === 'info' ? 'text-indigo-700' : level === 'error' ? 'text-clay-800' : 'text-clay';
+    level === 'info' ? 'text-primary' : level === 'error' ? 'text-brick' : 'text-clay';
 
   return (
     <div className={`${bgClass} border py-3 px-4 rounded text-sm md:text-base flex items-start gap-3`}>
