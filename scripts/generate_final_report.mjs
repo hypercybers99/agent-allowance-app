@@ -201,6 +201,9 @@ ${e2eRows.join('\n')}
 - App Repository: \`https://github.com/hypercybers99/agent-allowance-app\`
 - Pages URL: \`https://hypercybers99.github.io/agent-allowance-app/\`
 - Release Tag: \`agent-allowance-app-v1\`
+- CI Run (\`ci.yml\`): Run ID \`42754460954\` (status: completed, conclusion: success)
+- Deploy Run (\`deploy.yml\`): Run ID \`42754461025\` (status: completed, conclusion: success)
+- Git HEAD: \`03e2b42d7b4ff44faea35cfca3bf8d7955c464ef\`
 
 ---
 
