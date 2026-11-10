@@ -27,17 +27,27 @@ const CONTRACTS_TO_VERIFY = [
 ];
 
 async function rpcCall(method, params) {
-  const res = await fetch(RPC_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      jsonrpc: '2.0',
-      id: Date.now(),
-      method,
-      params,
-    }),
-  });
-  return res.json();
+  let attempts = 0;
+  const maxAttempts = 5;
+  while (attempts < maxAttempts) {
+    try {
+      attempts++;
+      const res = await fetch(RPC_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          jsonrpc: '2.0',
+          id: Date.now(),
+          method,
+          params,
+        }),
+      });
+      return await res.json();
+    } catch (err) {
+      if (attempts >= maxAttempts) throw err;
+      await new Promise(r => setTimeout(r, 1000 * attempts));
+    }
+  }
 }
 
 async function main() {

@@ -9,12 +9,12 @@ export default defineConfig({
   fullyParallel: false,
   reporter: 'list',
   use: {
-    baseURL: 'http://localhost:4173',
+    baseURL: 'http://localhost:4173/agent-allowance-app/',
     trace: 'on-first-retry',
   },
   webServer: {
     command: 'npm run preview -- --port 4173',
-    url: 'http://localhost:4173',
+    url: 'http://localhost:4173/agent-allowance-app/',
     reuseExistingServer: !process.env.CI,
     timeout: 30000,
   },

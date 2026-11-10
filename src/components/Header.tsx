@@ -27,12 +27,12 @@ export const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo & Preview Badge */}
-          <div className="flex items-center gap-3">
-            <Link to="/" className="flex items-center gap-2 font-bold text-2xl text-ink hover:text-primary transition-colors">
-              <ShieldCheck className="text-primary w-8 h-8" aria-hidden="true" />
-              <span>Agent Allowance</span>
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <Link to="/" className="flex items-center gap-1.5 sm:gap-2 font-bold text-lg sm:text-2xl text-ink hover:text-primary transition-colors">
+              <ShieldCheck className="text-primary w-6 h-6 sm:w-8 sm:h-8 shrink-0" aria-hidden="true" />
+              <span className="truncate">Agent Allowance</span>
             </Link>
-            <span className="inline-block bg-clay-bg text-clay text-xs font-semibold px-2.5 py-1 rounded border border-clay/30 uppercase tracking-wider">
+            <span className="inline-block bg-clay-bg text-clay text-xs font-semibold px-2 py-0.5 rounded border border-clay/30 uppercase tracking-wider shrink-0">
               Preview
             </span>
           </div>

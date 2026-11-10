@@ -51,44 +51,44 @@ export const LimitsPage: React.FC = () => {
           <h2 className="text-xl font-bold text-slate-900 font-sans">
             On-Chain Numerical Limits (from <code>get_limits()</code>)
           </h2>
-          <span className="text-xs font-mono text-slate-600">
+          <span className="text-xs font-mono text-slate-700 font-medium">
             {loading ? 'Reading on-chain...' : 'Source: AllowanceVault.py'}
           </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm font-mono">
           <div className="p-3 bg-parchment-50 border border-parchment-300 rounded">
-            <span className="text-xs text-slate-500 font-sans block uppercase">Max Page Size</span>
+            <span className="text-xs text-slate-700 font-sans block uppercase font-semibold">Max Page Size</span>
             <span className="text-lg font-bold text-slate-900">
               {contractLimits?.max_page_bytes ? Number(contractLimits.max_page_bytes).toLocaleString() : '400,000'} bytes
             </span>
           </div>
           <div className="p-3 bg-parchment-50 border border-parchment-300 rounded">
-            <span className="text-xs text-slate-500 font-sans block uppercase">Min Rendered Text</span>
+            <span className="text-xs text-slate-700 font-sans block uppercase font-semibold">Min Rendered Text</span>
             <span className="text-lg font-bold text-slate-900">
               {contractLimits?.min_text_chars ?? '100'} chars
             </span>
           </div>
           <div className="p-3 bg-parchment-50 border border-parchment-300 rounded">
-            <span className="text-xs text-slate-500 font-sans block uppercase">Max URL Length</span>
+            <span className="text-xs text-slate-700 font-sans block uppercase font-semibold">Max URL Length</span>
             <span className="text-lg font-bold text-slate-900">
               {contractLimits?.max_url_len ?? '300'} chars
             </span>
           </div>
           <div className="p-3 bg-parchment-50 border border-parchment-300 rounded">
-            <span className="text-xs text-slate-500 font-sans block uppercase">Max Payees / Account</span>
+            <span className="text-xs text-slate-700 font-sans block uppercase font-semibold">Max Payees / Account</span>
             <span className="text-lg font-bold text-slate-900">
               {contractLimits?.max_payees ?? '10'}
             </span>
           </div>
           <div className="p-3 bg-parchment-50 border border-parchment-300 rounded">
-            <span className="text-xs text-slate-500 font-sans block uppercase">Max List Limit</span>
+            <span className="text-xs text-slate-700 font-sans block uppercase font-semibold">Max List Limit</span>
             <span className="text-lg font-bold text-slate-900">
               {contractLimits?.max_list_limit ?? '100'}
             </span>
           </div>
           <div className="p-3 bg-parchment-50 border border-parchment-300 rounded">
-            <span className="text-xs text-slate-500 font-sans block uppercase">Max Agents / Account</span>
+            <span className="text-xs text-slate-700 font-sans block uppercase font-semibold">Max Agents / Account</span>
             <span className="text-lg font-bold text-slate-900">
               {contractLimits?.max_agents ?? '10'}
             </span>
@@ -111,7 +111,7 @@ export const LimitsPage: React.FC = () => {
             <br />
             &nbsp;&nbsp;raise gl.vm.UserError("empty_page")
           </div>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-slate-700">
             If a site requires authentication or JavaScript evaluation, the transaction will fail before consensus.
           </p>
         </div>
@@ -142,14 +142,14 @@ export const LimitsPage: React.FC = () => {
             The lead validator executes LLM extraction. Other validators in consensus run the deterministic comparison principle to prevent LLM non-determinism from splitting the network.
           </p>
           <div className="p-3 bg-parchment-50 border border-parchment-300 rounded text-xs text-slate-800 font-mono overflow-x-auto">
-            <div className="text-slate-500">// Validator verification principle</div>
+            <div className="text-slate-700 font-medium">// Validator verification principle</div>
             result = gl.eq_principle.strict_eq(
             <br />
             &nbsp;&nbsp;lambda: run_extraction(evidence_url, prompt)
             <br />
             )
           </div>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-slate-700">
             Validators must observe identical extracted outputs or consensus fails to majority agree.
           </p>
         </div>
@@ -163,7 +163,7 @@ export const LimitsPage: React.FC = () => {
             When invoice evidence lacks an explicit total or contains contradictory information, the model returns <code>ASK_OWNER</code>.
           </p>
           <div className="p-3 bg-amber-50 border border-amber-300 rounded text-xs text-amber-950">
-            The spend request transitions to state <code>PENDING</code>. The human account owner must explicitly review and call <code>resolve_spend(spend_id, approve, reason)</code> to either approve the payment or decline it.
+            The spend request transitions to state <code>PENDING</code>. The human account owner must explicitly review and call <code>resolve_spend(spend_id, approve)</code> to either approve the payment or decline it.
           </div>
         </div>
 
@@ -175,7 +175,7 @@ export const LimitsPage: React.FC = () => {
           <p className="text-sm text-slate-700">
             Allowances are strictly lifetime-cumulative or per-request caps. The contract does not implement cron jobs, calendar month rollovers, or automatic balance renewals.
           </p>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-slate-700">
             Once an agent reaches their total allocated allowance cap, the account owner must explicitly deposit additional demo credits.
           </p>
         </div>
@@ -188,7 +188,7 @@ export const LimitsPage: React.FC = () => {
           <p className="text-sm text-slate-700">
             Historical validation runs referenced test fixtures under user <code>huzyow155</code>. Current deployments reference pinned fixtures under canonical organization <code>hypercybers99</code>.
           </p>
-          <p className="text-xs text-slate-600">
+          <p className="text-xs text-slate-700">
             Fixtures contain static synthetic invoices hosted in public GitHub raw markdown files.
           </p>
         </div>

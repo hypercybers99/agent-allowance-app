@@ -42,23 +42,23 @@ export const LandingPage: React.FC = () => {
           Enforce spending budgets, payee allowlists, and distributed LLM consensus on raw web invoices before settling.
         </p>
 
-        <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
           <Link
             to="/accounts/new"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary-hover text-primary-contrast text-lg font-semibold px-6 py-3.5 rounded transition-colors shadow"
+            className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-hover text-primary-contrast text-base sm:text-lg font-semibold px-4 sm:px-6 py-3 rounded transition-colors shadow max-w-full"
           >
             <span>Create Spending Account</span>
-            <ArrowRight size={20} aria-hidden="true" />
+            <ArrowRight size={18} aria-hidden="true" />
           </Link>
           <Link
             to="/accounts"
-            className="inline-flex items-center gap-2 bg-sand hover:bg-sand-border text-ink text-lg font-semibold px-6 py-3.5 rounded border border-sand-border transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-sand hover:bg-sand-border text-ink text-base sm:text-lg font-semibold px-4 sm:px-6 py-3 rounded border border-sand-border transition-colors max-w-full"
           >
             <span>Explore Accounts</span>
           </Link>
           <Link
             to="/evidence"
-            className="inline-flex items-center gap-2 bg-page hover:bg-sand text-ink text-lg font-semibold px-6 py-3.5 rounded border border-sand-border transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-page hover:bg-sand text-ink text-base sm:text-lg font-semibold px-4 sm:px-6 py-3 rounded border border-sand-border transition-colors max-w-full"
           >
             <span>View Chain Evidence</span>
           </Link>
@@ -109,7 +109,7 @@ export const LandingPage: React.FC = () => {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-ink">On-Chain Ledger State (Studionet Chain 61999)</h2>
         <p className="text-base text-ink-muted">
-          Read directly from AllowanceVault contract <code>{CONTRACT_DEPLOYMENTS.allowanceVault.address}</code>.
+          Read directly from AllowanceVault contract <code className="break-all">{CONTRACT_DEPLOYMENTS.allowanceVault.address}</code>.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

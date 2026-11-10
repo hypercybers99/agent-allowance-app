@@ -23,7 +23,7 @@ export const EvidencePage: React.FC = () => {
           On-Chain Evidence & Verification
         </h1>
         <p className="mt-2 text-slate-700">
-          Cryptographically pinned execution evidence, canonical transactions, and robustness runs on GenLayer studionet.
+          Git-pinned execution evidence, canonical transactions, and robustness runs on GenLayer studionet.
         </p>
       </div>
 
@@ -75,7 +75,7 @@ export const EvidencePage: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-4 overflow-x-auto">
+        <div className="mt-4 overflow-x-auto" tabIndex={0} role="region" aria-label="Canonical spend requests table">
           <table className="w-full text-left text-sm font-sans border-collapse">
             <thead>
               <tr className="border-b border-parchment-400 bg-parchment-200 text-slate-800">
@@ -151,11 +151,11 @@ export const EvidencePage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-mono">
               <div>
-                <span className="text-slate-500 block">Evidence URL:</span>
+                <span className="text-slate-700 block font-semibold">Evidence URL:</span>
                 <span className="break-all text-slate-900">{activeReq.evidenceFile}</span>
               </div>
               <div>
-                <span className="text-slate-500 block">Transaction Hash:</span>
+                <span className="text-slate-700 block font-semibold">Transaction Hash:</span>
                 {activeReq.txHash ? (
                   <a
                     href={getExplorerTxUrl(activeReq.txHash)}
@@ -166,17 +166,17 @@ export const EvidencePage: React.FC = () => {
                     {activeReq.txHash}
                   </a>
                 ) : (
-                  <span className="text-slate-500">not recorded</span>
+                  <span className="text-slate-700">not recorded</span>
                 )}
               </div>
               <div>
-                <span className="text-slate-500 block">Observed Amount & Category:</span>
+                <span className="text-slate-700 block font-semibold">Observed Amount & Category:</span>
                 <span className="text-slate-900">
                   {activeReq.observedAmount} CREDITS ({activeReq.observedCategory})
                 </span>
               </div>
               <div>
-                <span className="text-slate-500 block">Verbatim Extracted Quote:</span>
+                <span className="text-slate-700 block font-semibold">Verbatim Extracted Quote:</span>
                 <span className="text-slate-800 italic">
                   "{activeReq.quote || 'none'}"
                 </span>
@@ -201,7 +201,7 @@ export const EvidencePage: React.FC = () => {
           All 6 fixture targets were tested with 10 repeated on-chain transactions each (60 runs total) via <code>scripts/run_robustness_batch.mjs</code> on contract <code>{ACTIVE_CONTRACTS.probe.address}</code>.
         </p>
 
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto" tabIndex={0} role="region" aria-label="Robustness batch results table">
           <table className="w-full text-left text-sm font-sans border-collapse">
             <thead>
               <tr className="border-b border-parchment-400 bg-parchment-200 text-slate-800">
