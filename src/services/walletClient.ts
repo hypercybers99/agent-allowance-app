@@ -1,7 +1,6 @@
 // Wallet Client for Injected Web3 / MetaMask on GenLayer Studionet (Chain 61999)
 // Provides typed write interactions with AllowanceVault and SpendGate.
 
-import { createClient, chains } from 'genlayer-js';
 import {
   ACTIVE_ALLOWANCE_VAULT,
   ACTIVE_SPEND_GATE,

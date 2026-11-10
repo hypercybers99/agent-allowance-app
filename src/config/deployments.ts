@@ -75,3 +75,27 @@ export const CONTRACT_DEPLOYMENTS = {
 
 export const ACTIVE_ALLOWANCE_VAULT = CONTRACT_DEPLOYMENTS.allowanceVault.address;
 export const ACTIVE_SPEND_GATE = CONTRACT_DEPLOYMENTS.spendGate.address;
+
+export function getExplorerTxUrl(txHash: string): string {
+  return `${NETWORK_CONFIG.explorerUrl}/tx/${txHash}`;
+}
+
+export function getExplorerAccountUrl(address: string): string {
+  return `${NETWORK_CONFIG.explorerUrl}/address/${address}`;
+}
+
+export const ACTIVE_CONTRACTS = {
+  vault: {
+    address: CONTRACT_DEPLOYMENTS.allowanceVault.address,
+    expectedSha256: CONTRACT_DEPLOYMENTS.allowanceVault.sourceSha256,
+  },
+  gate: {
+    address: CONTRACT_DEPLOYMENTS.spendGate.address,
+    expectedSha256: CONTRACT_DEPLOYMENTS.spendGate.sourceSha256,
+  },
+  probe: {
+    address: CONTRACT_DEPLOYMENTS.probeExtract.address,
+    expectedSha256: CONTRACT_DEPLOYMENTS.probeExtract.sourceSha256,
+  },
+};
+
