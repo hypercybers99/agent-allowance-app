@@ -1,0 +1,20 @@
+{
+  "account_id": "1",
+  "agent": "0xea35967eb5440bd52de0d4c09804361e9f12bab7",
+  "decision": "APPROVED",
+  "declared_amount": "120",
+  "declared_category": "CLOUD",
+  "evidence_url": "https://raw.githubusercontent.com/huzyow155/agent-allowance-fixtures/17d05116617effeaa127249914f3b4e691ecad40/cloudco/inv-a-120.md",
+  "executed": "true",
+  "id": "1",
+  "leader_reported": "true",
+  "norm_hash16": "dd3c54d999637028",
+  "observed_amount": "120",
+  "observed_category": "CLOUD",
+  "payee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+  "quote": "Total due: 120 USD",
+  "reason": "-",
+  "schema_version": "1",
+  "seq": "1",
+  "tripwire": false
+}

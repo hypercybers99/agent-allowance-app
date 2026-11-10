@@ -1,0 +1,34 @@
+{
+  "agents": [
+    "0xea35967eb5440bd52de0d4c09804361e9f12bab7"
+  ],
+  "balance": "50",
+  "categories": [
+    "CLOUD",
+    "DATA",
+    "SOFTWARE"
+  ],
+  "currency": "USD",
+  "id": "1",
+  "max_spends": "6",
+  "name": "Production Allowance Account",
+  "owner": "0x1d539fb3ded5bb5b6d68414238ece9a972a35921",
+  "payees": [
+    {
+      "payee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+      "prefix": "https://raw.githubusercontent.com/huzyow155/agent-allowance-fixtures/17d05116617effeaa127249914f3b4e691ecad40/cloudco/"
+    },
+    {
+      "payee": "0x898455ebb9069ae933df1a21105cb0b753cc61b0",
+      "prefix": "https://raw.githubusercontent.com/huzyow155/agent-allowance-fixtures/17d05116617effeaa127249914f3b4e691ecad40/datashop/"
+    }
+  ],
+  "per_spend_cap": "200",
+  "policy_hash": "c26a3721cf849ba2c8202a91d4122b530bd5f1c21f5a36c87e0c0690c83c5538",
+  "schema_version": "1",
+  "seq": "1",
+  "spend_count": "4",
+  "spent": "450",
+  "status": "OPEN",
+  "total_budget": "500"
+}

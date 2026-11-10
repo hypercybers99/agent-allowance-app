@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "source_repo": "https://github.com/hypercybers99/agent-allowance-genlayer",
+    "source_tag": "aa-v1b",
+    "source_commit": "1880a063e2967c0f885ee4b2e6c7c951a7b72c1b",
+    "source_path": "docs/evidence/negative/",
+    "synced_at": "2026-11-10T03:05:35.425Z"
+  },
+  "data": {
+    "bad_prefix": [
+      {
+        "variant": "no_trailing_slash",
+        "prefix": "https://raw.githubusercontent.com/test",
+        "expectedError": "bad prefix: trailing slash",
+        "txHash": "0xc48255144d5adff8b42d5700f8b12b15922d2ef14482233bb83cebcfa4d6e8d7",
+        "rawError": "",
+        "decodedError": "bad prefix: trailing slash"
+      },
+      {
+        "variant": "userinfo",
+        "prefix": "https://user:pass@raw.githubusercontent.com/test/",
+        "expectedError": "bad prefix: userinfo",
+        "txHash": "0xdad4cd8bc49366819cf8d7a729c3bd630d4efc44f0bb56b55effbafee2db5977",
+        "rawError": "",
+        "decodedError": "bad prefix: userinfo"
+      },
+      {
+        "variant": "query",
+        "prefix": "https://raw.githubusercontent.com/test/?query=1/",
+        "expectedError": "bad prefix: query",
+        "txHash": "0x7920b0470e463f9013fca0bba287b26d5df38dbef6589a47f7704a22bd371217",
+        "rawError": "",
+        "decodedError": "bad prefix: query"
+      },
+      {
+        "variant": "bad_scheme",
+        "prefix": "http://raw.githubusercontent.com/test/",
+        "expectedError": "bad prefix: scheme",
+        "txHash": "0x042c2cc8f52ea4e96fa574d0982d1898bbf49024442443159e2fe76971f65624",
+        "rawError": "",
+        "decodedError": "bad prefix: scheme"
+      }
+    ],
+    "closed_account": {
+      "case": "closed_account",
+      "txHash": "0x6ba0aa046dab8f7018f0a2ebf7c194a9e3269a16109c33c70035666fca635b68",
+      "rawError": "",
+      "decodedError": "account closed",
+      "expectedError": "account closed",
+      "verifiedAt": "2026-10-26T04:12:40.741Z"
+    },
+    "duplicate_obs": {
+      "case": "duplicate_observation",
+      "txHash": "0x9a98565fae936418e04b5737c309123eb60d5f4f5e9194a73bcf3e54ce8ec8f0",
+      "rawError": "",
+      "decodedError": "duplicate observation: 15",
+      "expectedError": "duplicate observation: 15",
+      "verifiedAt": "2026-10-26T04:12:21.254Z"
+    },
+    "funding_budget_breach": {
+      "case": "funding_exceeds_budget",
+      "accountId": "4",
+      "txHash": "0x8b56459456687faeed71bfbb0fc4a88142c1a13db400d3467d8b9d15cdf6bdb4",
+      "rawError": "",
+      "decodedError": "funding exceeds the budget rule",
+      "expectedError": "funding exceeds the budget rule",
+      "verifiedAt": "2026-10-26T04:13:04.627Z"
+    },
+    "not_agent": {
+      "case": "not_a_registered_agent",
+      "txHash": "0x69d80d5872d9f148c749fb4e59b097f1e242eb5582aeb22541263acf093ee615",
+      "rawError": "",
+      "decodedError": "not a registered agent",
+      "expectedError": "not a registered agent",
+      "verifiedAt": "2026-10-26T04:12:26.644Z"
+    },
+    "resolve_non_pending": {
+      "case": "resolve_non_pending_spend",
+      "spendId": "16",
+      "accountId": "4",
+      "owner": "0x6cd39E28793f7EF386f35c1081d11fb757FCD94B",
+      "txHash": "0x07c6fd37569ea65b1164af221111cbd3e0cbf48db1ce6843ea3f8510bd8139a5",
+      "rawError": "",
+      "decodedError": "spend not pending",
+      "expectedError": "spend not pending",
+      "verifiedAt": "2026-10-26T04:15:14.211Z"
+    },
+    "too_short": {
+      "case": "too_short_page",
+      "fixtureFile": "cloudco/inv-i-short.md",
+      "fixtureCommit": "1412ed737ea096b9e023726a1def18fc1a470806",
+      "txHash": "0x05e1da3ba0a537e9b0f30af1277464fbd5ca576a14e662537eb4877f906674fa",
+      "rawError": "",
+      "decodedError": "page unreadable (too little text; it may need JavaScript)",
+      "expectedError": "page unreadable (too little text; it may need JavaScript)",
+      "verifiedAt": "2026-10-26T04:12:05.822Z"
+    },
+    "url_404": {
+      "case": "evidence_url_404",
+      "txHash": "0xeccecdca79617b1e403323602505cbb4f6b29fab0a77b9065850a078a77b1ac8",
+      "rawError": "",
+      "decodedError": "HTTP status not 200: 404",
+      "expectedError": "HTTP status not 200: 404",
+      "verifiedAt": "2026-10-26T04:11:10.215Z"
+    }
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "_meta": {
+    "source_repo": "https://github.com/hypercybers99/agent-allowance-genlayer",
+    "source_tag": "aa-v1b",
+    "source_commit": "1880a063e2967c0f885ee4b2e6c7c951a7b72c1b",
+    "source_path": "docs/evidence/spendgate/",
+    "synced_at": "2026-11-10T03:05:35.430Z"
+  },
+  "data": {
+    "altered_account": {
+      "description": "is_spend_valid_for returns false when account_id is altered",
+      "spendId": "1",
+      "accountId": "99",
+      "payee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+      "amount": 120,
+      "policyHash": "c26a3721cf849ba2c8202a91d4122b530bd5f1c21f5a36c87e0c0690c83c5538",
+      "result": false,
+      "verifiedAt": "2026-10-26T04:09:14.514Z"
+    },
+    "altered_amount": {
+      "description": "is_spend_valid_for returns false when amount is altered",
+      "spendId": "1",
+      "accountId": "1",
+      "payee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+      "amount": 999,
+      "policyHash": "c26a3721cf849ba2c8202a91d4122b530bd5f1c21f5a36c87e0c0690c83c5538",
+      "result": false,
+      "verifiedAt": "2026-10-26T04:09:17.203Z"
+    },
+    "altered_payee": {
+      "description": "is_spend_valid_for returns false when payee is altered",
+      "spendId": "1",
+      "accountId": "1",
+      "payee": "0x4d696d14cD25E8aD69BE1eeAe8382BBBf105D3bb",
+      "amount": 120,
+      "policyHash": "c26a3721cf849ba2c8202a91d4122b530bd5f1c21f5a36c87e0c0690c83c5538",
+      "result": false,
+      "verifiedAt": "2026-10-26T04:09:15.853Z"
+    },
+    "altered_policy_hash": {
+      "description": "is_spend_valid_for returns false when policy_hash is altered",
+      "spendId": "1",
+      "accountId": "1",
+      "payee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+      "amount": 120,
+      "policyHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "result": false,
+      "verifiedAt": "2026-10-26T04:09:18.521Z"
+    },
+    "serve_denied": {
+      "description": "serve refused for a DENIED spend",
+      "target": "SpendGate.serve",
+      "spendId": "3",
+      "txHash": "0x4921d5381bb5696312145f59ec492f6b9dd3a726e5fffed38163adff7c61cc5e",
+      "decodedError": "spend not valid for these parameters",
+      "rawError": "",
+      "verifiedAt": "2026-10-26T04:09:33.007Z"
+    },
+    "serve_duplicate": {
+      "description": "Second serve refused with 'spend already served'",
+      "spendId": "15",
+      "txHash": "0xdbd32e14368f0d811a6ce93db55955b4280a3f3802e6a1d46559c4603312c36f",
+      "decodedError": "spend already served",
+      "rawError": "",
+      "verifiedAt": "2026-10-26T04:10:41.412Z"
+    },
+    "serve_non_payee": {
+      "description": "serve refused when sender != payee",
+      "target": "SpendGate.serve",
+      "sender": "0x4d696d14cD25E8aD69BE1eeAe8382BBBf105D3bb",
+      "expectedPayee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+      "txHash": "0x551e5e146c539924daf3d2d23020d9a1337e6553b7aa3e2fdf391aae9662ed41",
+      "decodedError": "sender must equal payee",
+      "rawError": "",
+      "verifiedAt": "2026-10-26T04:09:24.216Z"
+    },
+    "serve_success": {
+      "description": "SpendGate.serve() executed by registered payee",
+      "spendId": "15",
+      "accountId": "3",
+      "payee": "0xf6b95e6c8913df24fB50869b3dff8aD19D1FD363",
+      "amount": 120,
+      "policyHash": "7e858a2703aa15b7ea95ded7ba299d5fe361228cd719812beb58ed79c814c060",
+      "txHash": "0xd245b4482b4e9f7554c71ce8e774255c4e67500a08b6a22248890d91840c4371",
+      "latency": "5.25",
+      "status_name": "ACCEPTED",
+      "receiptRulePassed": true,
+      "serviceRecord": {
+        "account_id": "3",
+        "amount": "120",
+        "payee": "0xf6b95e6c8913df24fb50869b3dff8ad19d1fd363",
+        "policy_hash": "7e858a2703aa15b7ea95ded7ba299d5fe361228cd719812beb58ed79c814c060",
+        "schema_version": "1",
+        "served_by": "0xf6b95e6c8913df24fb50869b3dff8ad19d1fd363",
+        "spend_id": "15",
+        "status": "SERVED"
+      },
+      "verifiedAt": "2026-10-26T04:10:32.628Z"
+    },
+    "valid_r1": {
+      "description": "is_spend_valid_for returns true for canonical Spend 1",
+      "spendId": "1",
+      "accountId": "1",
+      "payee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+      "amount": 120,
+      "policyHash": "c26a3721cf849ba2c8202a91d4122b530bd5f1c21f5a36c87e0c0690c83c5538",
+      "result": true,
+      "crossContractVaultChecked": "0xd89C4fCB63773C01e8494EebaE7375C4d5992E07",
+      "verifiedAt": "2026-10-26T04:09:13.004Z"
+    }
+  }
+}

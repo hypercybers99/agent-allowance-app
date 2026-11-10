@@ -1,0 +1,10 @@
+{
+  "account_id": "1",
+  "amount": "120",
+  "category": "CLOUD",
+  "decision": "APPROVED",
+  "executed": "true",
+  "payee": "0x6ecb277c73b68db5edbc6c79cd3b63d80d75376d",
+  "policy_hash": "c26a3721cf849ba2c8202a91d4122b530bd5f1c21f5a36c87e0c0690c83c5538",
+  "spend_id": "1"
+}
